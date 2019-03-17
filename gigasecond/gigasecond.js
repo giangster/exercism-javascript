@@ -6,10 +6,8 @@ function parseISOString(s) {
 export function gigasecond(date) {
   let bDate = new Date(date);
 
-  bDate.setSeconds(bDate.getSeconds() + 40);
-  bDate.setMinutes(bDate.getMinutes() + 46);
-  bDate.setHours(bDate.getHours() + 1);
-  bDate.setDate(bDate.getDate() + 11574);
+  bDate = bDate.getTime() / 1000 + Math.pow(10, 9);
+  bDate = new Date(bDate * 1000);
   bDate = bDate.toISOString();
 
   return parseISOString(bDate);
