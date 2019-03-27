@@ -1,3 +1,4 @@
+const gigasecondInMs = Math.pow(10, 12);
 export function gigasecond(date) {
-  return new Date(new Date(date).getTime() + Math.pow(10, 12));
+  return new Date(date.getTime() + gigasecondInMs);
 }
